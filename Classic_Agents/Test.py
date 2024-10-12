@@ -2,12 +2,13 @@
 from crewai import Crew, Task, Agent
 from crewai_tools import SerperDevTool
 from langchain import OpenAI
+from dotenv import load_dotenv
 import os
 import warnings
 warnings.filterwarnings("ignore")
 
-api_key='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'
-os.environ["SERPER_API_KEY"] = "7c1829de968bc7e6b51c29c28c4d00fc21b3ecac"
+load_dotenv()
+api_key = os.environ["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 
